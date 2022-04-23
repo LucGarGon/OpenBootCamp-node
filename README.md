@@ -41,8 +41,22 @@
   
 # Scripts
 
-        "build": "npx tsc",
-    "start": "node dist/index.js",
-    "dev": "concurrently \"npx tsc --watch\" \"nodemon -q dist/index.js\"",
-    "test": "jest",
-    "serve:coverage":"npm run test && cd coverage/lcov-report && npx serve"
+    1. "build": "npx tsc"
+        compila los archivos typescript a javascript.
+
+    2. "start": "node dist/index.js",
+        inicia el servidor node, a través de los archivos de typescript precompilados.
+
+    3. "dev": "concurrently \"npx tsc --watch\" \"nodemon -q dist/index.js\"",
+        permite iniciar el servidor con typescript, de tal modo que si se ejecuta algún cambio el servidor se autoreinicia. 
+
+    4. "test": "jest",
+        Ejecuta los test.
+
+    5. "serve:coverage":"npm run test && cd coverage/lcov-report && npx serve"
+        Iniciar los test y sirve la página estática que informa sobre el coverage de los test.
+
+# Variables de entorno
+
+    PORT -> especificar el puerto en el que se servira
+    el servidor node.
