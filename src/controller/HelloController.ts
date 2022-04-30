@@ -1,10 +1,10 @@
 import { BasicResponse } from './types'
-import { HelloController } from './interfaces'
-import { LogSuccess } from '@/utils/logger'
+import { GreetingsController } from './interfaces/index'
+import { Log } from '@app/utils/logger-winston'
 
-export class HelloControllerImpl implements HelloController {
+export class HelloControllerImpl implements GreetingsController {
   public async getMessage (name?: string): Promise<BasicResponse> {
-    LogSuccess('[/api/hello] Get Request')
+    Log.info('[/api/hello] Get Request')
 
     return {
       message: `Hello ${name || 'world!'}`

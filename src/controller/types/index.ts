@@ -1,5 +1,6 @@
 export type BasicResponse = {
-    message: string
+    message: string,
+    data?: string
 }
 export type ErrorResponse = {
     error: string;

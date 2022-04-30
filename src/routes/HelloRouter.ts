@@ -1,15 +1,14 @@
-import { HelloControllerImpl } from '@/controller/HelloController'
-import { HelloController } from '@/controller/interfaces'
+import { HelloControllerImpl } from '@app/controller/HelloController'
+import { Log } from '@app/utils/logger-winston'
 import express, { Request, Response } from 'express'
-
-import { LogInfo } from '../utils/logger'
+import { GreetingsController } from '../controller/interfaces/index'
 
 export const helloRouter = express.Router()
 helloRouter.route('/')
   .get(async (req: Request, res: Response) => {
     const name: any = req?.query?.name
-    LogInfo(`Query params: ${name}`)
-    const controller: HelloController = new HelloControllerImpl()
+    Log.info(`Query params: ${name}`)
+    const controller: GreetingsController = new HelloControllerImpl()
     const response = await controller.getMessage(name)
     return res.send(response)
   })

@@ -38,6 +38,10 @@
     typescript -> necesario para utilizar typescript.
 
     webpack -> permite configurar el empaquetado de los ficheros js
+
+    helmet -> permite configurar los http headers.
+
+    cors -> permite configurar el cors, Access-Control-Allow-Origin.
   
 # Scripts
 
