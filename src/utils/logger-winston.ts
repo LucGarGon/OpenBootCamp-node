@@ -17,7 +17,7 @@ const logger = createLogger({
 })
 
 export class Log {
-  static info (log:string) { logger.info(log) }
+  static info = (log:string) => logger.info(log)
   static error = (log:string) => logger.error(log)
   static warn = (log:string) => logger.warn(log)
 }

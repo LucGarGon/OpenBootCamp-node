@@ -7,7 +7,6 @@ dotenv.config()
 const port = process.env.PORT || 8000
 
 server.listen(port, () => {
-  console.log(process.env.LEVEL)
   Log.info(`[SERVER ON]: running in http://localhost:${port}/api`)
 })
 
